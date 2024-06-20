@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const connectDatabase = () => {
-    mongoose.connect(process.env.MONGO_URI, {
+    mongoose.connect("mongodb://localhost:27017/ecommapp", {
         useNewURLParser:true,
         useUnifiedTopology: true
 

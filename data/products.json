@@ -1,0 +1,292 @@
+[
+  {
+    "name": "Smartphone",
+    "price": 499.99,
+    "description": "A high-end smartphone with a sleek design and powerful features.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "img123",
+        "url": "https://example.com/images/smartphone.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "TechStore",
+    "stock": 50,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "John Doe",
+        "rating": 5,
+        "comment": "Amazing phone with great features!"
+      },
+      {
+        "name": "Jane Smith",
+        "rating": 4,
+        "comment": "Good value for the money."
+      }
+    ],
+    "createdAt": "2023-05-20T12:00:00Z"
+  },
+  {
+    "name": "Running Shoes",
+    "price": 79.99,
+    "description": "Comfortable running shoes suitable for all terrains.",
+    "ratings": 4.2,
+    "images": [
+      {
+        "public_id": "img124",
+        "url": "https://example.com/images/running_shoes.jpg"
+      }
+    ],
+    "category": "Sports & Outdoors",
+    "seller": "ShoeStore",
+    "stock": 100,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Alice Johnson",
+        "rating": 4,
+        "comment": "Very comfortable and durable."
+      },
+      {
+        "name": "Bob Brown",
+        "rating": 5,
+        "comment": "Perfect for my daily runs."
+      }
+    ],
+    "createdAt": "2023-06-15T08:30:00Z"
+  },
+  {
+    "name": "Cookbook",
+    "price": 25.00,
+    "description": "A collection of delicious recipes for every occasion.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "public_id": "img125",
+        "url": "https://example.com/images/cookbook.jpg"
+      }
+    ],
+    "category": "Books",
+    "seller": "BookStore",
+    "stock": 75,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Charlie Davis",
+        "rating": 5,
+        "comment": "Fantastic recipes and easy to follow instructions."
+      },
+      {
+        "name": "Dana White",
+        "rating": 4,
+        "comment": "Great book with a variety of recipes."
+      }
+    ],
+    "createdAt": "2023-07-01T14:20:00Z"
+  },
+  {
+    "name": "Laptop",
+    "price": 999.99,
+    "description": "A powerful laptop with top-notch specifications.",
+    "ratings": 4.7,
+    "images": [
+      {
+        "public_id": "img126",
+        "url": "https://example.com/images/laptop.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "LaptopWorld",
+    "stock": 30,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Eve Adams",
+        "rating": 5,
+        "comment": "Great performance and battery life."
+      },
+      {
+        "name": "Frank Edwards",
+        "rating": 4,
+        "comment": "Solid laptop for work and play."
+      }
+    ],
+    "createdAt": "2023-04-10T10:00:00Z"
+  },
+  {
+    "name": "Gaming Console",
+    "price": 399.99,
+    "description": "Next-gen gaming console with stunning graphics.",
+    "ratings": 4.9,
+    "images": [
+      {
+        "public_id": "img127",
+        "url": "https://example.com/images/gaming_console.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "GameHub",
+    "stock": 20,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Gina Hall",
+        "rating": 5,
+        "comment": "Best gaming experience ever!"
+      },
+      {
+        "name": "Henry Lee",
+        "rating": 5,
+        "comment": "Amazing graphics and gameplay."
+      }
+    ],
+    "createdAt": "2023-02-20T12:30:00Z"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 59.99,
+    "description": "Portable Bluetooth speaker with excellent sound quality.",
+    "ratings": 4.3,
+    "images": [
+      {
+        "public_id": "img128",
+        "url": "https://example.com/images/bluetooth_speaker.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "SoundWave",
+    "stock": 150,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Ivy Taylor",
+        "rating": 4,
+        "comment": "Great sound and battery life."
+      },
+      {
+        "name": "Jack Wilson",
+        "rating": 5,
+        "comment": "Perfect for outdoor use."
+      }
+    ],
+    "createdAt": "2023-03-15T11:00:00Z"
+  },
+  {
+    "name": "Wristwatch",
+    "price": 149.99,
+    "description": "Elegant wristwatch with a timeless design.",
+    "ratings": 4.6,
+    "images": [
+      {
+        "public_id": "img129",
+        "url": "https://example.com/images/wristwatch.jpg"
+      }
+    ],
+    "category": "Clothing",
+    "seller": "FashionTime",
+    "stock": 60,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Kevin Martin",
+        "rating": 5,
+        "comment": "Stylish and durable."
+      },
+      {
+        "name": "Laura Harris",
+        "rating": 4,
+        "comment": "Looks great with any outfit."
+      }
+    ],
+    "createdAt": "2023-01-25T09:30:00Z"
+  },
+  {
+    "name": "Fitness Tracker",
+    "price": 79.99,
+    "description": "Track your fitness and health with this advanced fitness tracker.",
+    "ratings": 4.4,
+    "images": [
+      {
+        "public_id": "img130",
+        "url": "https://example.com/images/fitness_tracker.jpg"
+      }
+    ],
+    "category": "Sports & Outdoors",
+    "seller": "HealthStore",
+    "stock": 200,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Michael Brown",
+        "rating": 4,
+        "comment": "Useful for daily tracking."
+      },
+      {
+        "name": "Nancy Carter",
+        "rating": 5,
+        "comment": "Great features and battery life."
+      }
+    ],
+    "createdAt": "2023-05-10T07:45:00Z"
+  },
+  {
+    "name": "Digital Camera",
+    "price": 299.99,
+    "description": "Capture stunning photos with this high-resolution digital camera.",
+    "ratings": 4.8,
+    "images": [
+      {
+        "public_id": "img131",
+        "url": "https://example.com/images/digital_camera.jpg"
+      }
+    ],
+    "category": "Cameras",
+    "seller": "CameraWorld",
+    "stock": 40,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Oscar Lewis",
+        "rating": 5,
+        "comment": "Excellent picture quality."
+      },
+      {
+        "name": "Pamela Walker",
+        "rating": 4,
+        "comment": "Easy to use and versatile."
+      }
+    ],
+    "createdAt": "2023-04-05T13:15:00Z"
+  },
+  {
+    "name": "Wireless Earbuds",
+    "price": 99.99,
+    "description": "Enjoy music on the go with these wireless earbuds.",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "img132",
+        "url": "https://example.com/images/wireless_earbuds.jpg"
+      }
+    ],
+    "category": "Electronics",
+    "seller": "AudioStore",
+    "stock": 120,
+    "numOfReviews": 2,
+    "reviews": [
+      {
+        "name": "Quincy Moore",
+        "rating": 5,
+        "comment": "Great sound and battery life."
+      },
+      {
+        "name": "Rachel Green",
+        "rating": 4,
+        "comment": "Comfortable and good quality."
+      }
+    ],
+    "createdAt": "2023-06-01T10:45:00Z"
+  }
+]
