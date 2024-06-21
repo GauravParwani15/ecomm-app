@@ -1,4 +1,5 @@
 const express = require('express');
+const errorMiddleware = require('./middlewares/error');
 
 const app = express();
 
@@ -8,5 +9,8 @@ const products = require('./routes/products');
 
 app.use('/api/v1',products);
 app.use('/api/v2',products);
+
+//middleware to handle errors globally
+app.use(errorMiddleware);
 
 module.exports=app;
