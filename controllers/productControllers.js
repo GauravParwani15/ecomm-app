@@ -2,6 +2,7 @@
 const Product = require('../models/products');
 const ErrorHandler = require('../utils/errorhandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncError');
+const ApiFeatures = require('../utils/apiFeatures');
 
 
 // Create new product => /api/v1/products/new
@@ -26,11 +27,21 @@ exports.newProduct = catchAsyncErrors( async (req, res, next) => {
 //get all products => /api/v1/products/
 exports.getProducts = catchAsyncErrors(async (req,res,next) => {
 
-    const products = await Product.find();
+    const resultsPerPage = 4;
+    
+    const apiFeatures = new ApiFeatures(Product.find(), req.query)
+                                .search()
+                                .filter()
+                                .pagination(resultsPerPage);
 
+    // this is used to count all the products in the database to pass it to the frontend via the Api features
+    const productCount = await Product.countDocuments();
+
+    const products = await apiFeatures.query;
     res.status(200).json({
         success:true,
         count: products.length,
+        productCount,
         data: products
     })
 } )
