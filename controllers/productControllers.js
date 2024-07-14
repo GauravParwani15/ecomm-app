@@ -1,12 +1,15 @@
 // Import models
 const Product = require('../models/products');
-const ErrorHandler = require('../utils/errorhandler');
+const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncError');
 const ApiFeatures = require('../utils/apiFeatures');
 
 
 // Create new product => /api/v1/products/new
 exports.newProduct = catchAsyncErrors( async (req, res, next) => {
+    
+    req.body.user= req.user.id;
+
     try {
         const newProduct = await Product.create(req.body);
         res.status(201).json({
