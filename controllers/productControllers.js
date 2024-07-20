@@ -112,3 +112,67 @@ exports.updateProduct = catchAsyncErrors( async (req, res, next) => {
             });
         }
     } )
+
+
+    //get all reviews of a product = > /api/v1/product/reviews/:id
+    exports.getProductReviews = catchAsyncErrors( async (req, res, next) => {
+        const product = await Product.findById(req.params.id);
+        
+        if(!product) {
+            return next(new ErrorHandler('Product not found', 404));
+        }
+        const reviews = product.reviews;
+
+        res.status(200).json({
+            success: true,
+            count: reviews.length,
+            data: reviews
+        })
+    
+    })
+
+    // create new review => /api/v1/review
+    exports.createProductReview = catchAsyncErrors( async (req, res, next) => {
+
+        const { rating, comment, productId } = req.body;
+
+        const review = {
+            user: req.user.id,
+            name: req.user.name,
+            rating: Number(rating),
+            comment
+        }
+
+        const product = await Product.findById(productId);
+        
+        if(!product) {
+            return next(new ErrorHandler('Product not found', 404));
+        }
+        const isReviewed = product.reviews.find(
+            r => r.user.toString() === req.user._id.toString()
+        )
+
+        if(isReviewed) {
+            product.reviews.forEach( review=>{
+                if(review._id.toString() === isReviewed._id.toString()){
+                    review.rating = Number(rating);
+                    review.comment = comment;
+                }
+            })
+        }
+        else {
+            product.reviews.push(review);
+            product.numOfReviews = product.reviews.length;
+            await product.save();
+        }
+
+        product.ratings = product.reviews.reduce((acc, item) => item.rating+acc, 0)/product.reviews.length
+
+        await product.save({validateBeforeSave: false});
+
+        res.status(200).json({
+            success: true,
+            message: 'Review created successfully',
+            data: product
+        })
+    })
