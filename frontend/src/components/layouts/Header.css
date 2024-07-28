@@ -1,0 +1,73 @@
+.navbar {
+    background-color: #232f3e;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px;
+  }
+  
+  .form-control {
+    border-radius: 20px 0 0 20px;
+    border: none;
+  }
+  
+  #search_btn {
+    background-color: #febd69;
+    border-radius: 0 20px 20px 0;
+    border: none;
+  }
+  
+  #search_btn:hover {
+    background-color: #f3a847;
+  }
+  
+  #cart {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  #cart_count {
+    background-color: #febd69;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    color: #131921;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .dropdown-toggle {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .avatar-nav {
+    margin-right: 0.5rem;
+  }
+  
+  .avatar-nav img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .dropdown-menu {
+    background-color: #131921;
+  }
+  
+  .dropdown-item {
+    color: #ffffff;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #232f3e;
+  }
+  
+  #login_btn {
+    background-color: #febd69;
+    color: #131921;
+    font-weight: bold;
+  }
+  
+  #login_btn:hover {
+    background-color: #f3a847;
+  }

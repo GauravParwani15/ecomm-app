@@ -1,0 +1,17 @@
+footer {
+  background-color: #232f3e;
+  color: #ffffff;
+  /* Remove these lines */
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  padding: 10px 0;
+}footer {
+    background-color: #232f3e;
+    color: #ffffff;
+    /* Remove these lines */
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    padding: 10px 0;
+}
