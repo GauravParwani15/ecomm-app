@@ -4,6 +4,12 @@ const errorMiddleware = require('./middlewares/error');
 const app = express();
 const cookieParser = require('cookie-parser');
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'http://localhost:3000', // Allow only your frontend domain
+    credentials: true, // Allow credentials (cookies, authorization headers, etc)
+}));
+
 app.use(express.json());
 
 app.use(cookieParser());
