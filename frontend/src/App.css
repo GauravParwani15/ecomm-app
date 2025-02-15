@@ -1,1 +1,21 @@
+/*loader */  
   
+  .loader{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 80px;
+    height: 80px;
+    padding-left: 0;
+  }
+ 
+
+  @keyframes lds-dual-ring{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }

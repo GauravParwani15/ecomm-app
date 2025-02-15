@@ -1,59 +1,73 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import Metadata from './layouts/Metadata';
 import './Home.css';
+import Loader from './layouts/Loader';
+import Product from './product/Product';
+import {useDispatch, useSelector} from 'react-redux';
+import { getProducts } from '../actions/productActions';
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+
+  const state = useSelector((state) => state);
+  // console.log("Entire State:", state);
+  const {products, loading, error, productsCount} = useSelector(state => state.products)
+
+  // const { loading, products, error, productsCount } = useSelector(state => state.products);
+  // console.log("Products from state:", products);
+  // console.log("State.products:", state.products);
+
+
+  useEffect(()=>{
+    dispatch(getProducts());
+
+    
+  }, [dispatch])
+
+
   return (
     <Fragment>
-      <Metadata title={`Buy Best ptoducts online`}/>
+      {loading ? <Loader />: (
+        <Fragment>
+   <Metadata title={`Buy Best ptoducts online`}/>
     <div>
       <div className="row">
         <div className="col-12 col-sm-6 col-md-12">
+          
           <h1 id="products_heading" className="text-secondary">Latest Products</h1>
 
           <section id="products" className="mt-5">
             <div className="row">
-              {/* <!-- Product Item 1 --> */}
-              <div className="col-sm-12 col-md-6 col-lg-3 my-3">
-                <div className="card p-3 rounded">
-                  <img
-                    className="card-img-top mx-auto"
-                    src="./images/default_product.png"
-                    alt=""
-                  />
-                  <div
-                    className="card-body ps-3 d-flex justify-content-center flex-column"
-                  >
-                    <h5 className="card-title">
-                      <a href="">Product Name 1</a>
-                    </h5>
-                    <div className="ratings mt-auto d-flex">
-                      <div className="star-ratings">
-                        <i className="fa fa-star star-active"></i>
-                        <i className="fa fa-star star-active"></i>
-                        <i className="fa fa-star star-active"></i>
-                        <i className="fa fa-star star-active"></i>
-                        <i className="fa fa-star star-active"></i>
-                      </div>
-                      <span id="no_of_reviews" className="pt-2 ps-2"> (0) </span>
-                    </div>
-                    <p className="card-text mt-2">$100</p>
-                    <a href="" id="view_btn" className="btn btn-block">
-                      View Details
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- End Product Item 1 --> */}
+
+            {products && products.map(products => (
+              <Product key ={products._id} product={products} />
+            ))}
+              
+
             </div>
+
+
+             <div class="todo">
+              <ul>
+                {/* <li>            {JSON.stringify(state)+"state"}</li> */}
+                <li>complete fronend 1-3 modules</li>
+                <li>make a docker of this project</li>
+                <li>learn system design and how to scale projects</li>
+              </ul>
+            </div> 
           </section>
         </div>
       </div>
 
+   
+    </div>
+        </Fragment>
+      )}
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://kit.fontawesome.com/9edb65c86a.js"></script>
-    </div>
     </Fragment>
   )
 }

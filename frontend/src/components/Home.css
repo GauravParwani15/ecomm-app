@@ -55,3 +55,25 @@
   #view_btn:hover {
     background-color: #131921;
   }
+  
+  .rating-outer {
+    position: relative;
+    display: inline-block;
+    font-size: 20px; /* Adjust size as needed */
+    color: #e0e0e0; /* Color for the unfilled stars */
+    overflow: hidden;
+  }
+  
+  .rating-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffc107; /* Color for the filled stars */
+    width: 0; /* This will be dynamically set */
+  }
+  
+  .rating-background {
+    color: #e0e0e0; /* Ensure the background stars are visible */
+  }

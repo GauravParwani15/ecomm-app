@@ -5,9 +5,8 @@ const Metadata = ({ title }) => {
   console.log(title);
 
   return (
-    <Helmet>
+    
       <title>{`${title} - Ecommerce App`}</title>
-    </Helmet>
   )
 }
 
